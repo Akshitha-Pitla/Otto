@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Fashion Hub</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1><a href="index.html">Fashion Hub</a></h1>
+      <input type="checkbox" id="nav-toggle">
+      <label for="nav-toggle" class="hamburger">
+        <div></div><div></div><div></div>
+      </label>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="trending.html">Trending</a></li>
+        <li><a href="sale.html">Sale</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="contact-page">
+    <section class="contact-form-container">
+      <h2>Contact Us</h2>
+      <p>Have any questions? We would love to hear from you!</p>
+      <form id="contactForm" class="contact-form">
+        <input type="text" id="name" name="name" placeholder="Your Name" required><br>
+        <input type="email" id="email" name="email" placeholder="Your Email" required><br>
+        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea><br>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="f-marquee">
+        <div class="f-announcment_bar">
+            <p>SHIPPING WORLDWIDE</p>
+            <p>SHIPPING WORLDWIDE</p>
+            <p>SHIPPING WORLDWIDE</p>
+            <p>SHIPPING WORLDWIDE</p>
+            <p>SHIPPING WORLDWIDE</p>
+            <p>SHIPPING WORLDWIDE</p>
+            <p>SHIPPING WORLDWIDE</p>
+            <p>SHIPPING WORLDWIDE</p>
+            <p>SHIPPING WORLDWIDE</p>
+            <p>SHIPPING WORLDWIDE</p>
+            <p>SHIPPING WORLDWIDE</p>
+            <p>SHIPPING WORLDWIDE</p>
+            <p>SHIPPING WORLDWIDE</p>
+            <p>SHIPPING WORLDWIDE</p>
+        </div>
+    </div>
+    <div class="f-container">
+        <a href="index2.html" class="f-container-logo">Fashion Hub</a>
+        <div class="f-container-content">
+            <div class="f-navlist">
+                <ul>
+                    <li class="l1">HELP</li>
+                    <li><a href="#">MEMBERS LOGIN</a></li>
+                    <li><a href="#">PLACE AN EXCHANGE/RETURN REQUEST</a></li>
+                    <li><a href="#">EXCHANGE/RETURNS POLICY</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">TERMS</a></li>
+                    <li><a href="#">SHIPPING</a></li>
+                </ul>
+            </div>
+            <div class="f-navlist2">
+                <ul>
+                    <li class="l1">COMPANY</li>
+                    <li><a href="#">STORY</a></li>
+                    <li><a href="#">OUR STORES</a></li>
+                    <li><a href="#">CAREERS</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                    <li><a href="#">COLLABORATIONS</a></li>
+                    <li><a href="#">BLOGS</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <p>&copy; 2025 Fashion Hub, All Rights Reserved.</p>
+</footer>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      localStorage.setItem('contactName', name);
+      localStorage.setItem('contactEmail', email);
+      localStorage.setItem('contactMessage', message);
+      alert("Your message has been saved! We will get back to you soon.");
+      this.reset();
+    });
+  </script>
+</body>
+</html>

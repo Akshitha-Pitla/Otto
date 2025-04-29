@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trending - Fashion Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <h1><a href="index.html">Fashion Hub</a></h1>
+            <input type="checkbox" id="nav-toggle">
+            <label for="nav-toggle" class="hamburger">
+                <div></div><div></div><div></div>
+            </label>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sale.html">Sale</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="newspaper-header">
+            <h2>Fashion Hub Times</h2>
+            <p id="current-date" class="date-line"></p> 
+            <div class="carousel">
+                <div class="carousel-track">
+                    <span>🔥 Summer Styles are Heating Up!</span>
+                    <span>👜 Must-Have Bags of 2025 Revealed!</span>
+                    <span>👟 Sneakers Take Over Runways</span>
+                    <span>🧥 Layered Looks for Every Season</span>
+                    <span>👗 Iconic Dresses Making a Comeback!</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="newspaper-content">
+            <div class="left-column">
+                <article class="feature-article">
+                    <img src="./images/featured.jpg" alt="Feature" />
+                    <h3>Fashion Week 2025: Stunning Highlights</h3>
+                    <p>From bold colors to reinvented classics, discover the top trends emerging from Fashion Week 2025.</p>
+                </article>
+                <article class="feature-article">
+                    <img src="./images/accessories.jpg" alt="Accessories" />
+                    <h3>Accessories that Define the Season</h3>
+                    <p>Statement jewelry and sleek leather bags are leading the accessories trend this season.</p>
+                </article>
+            </div>
+            <div class="right-column">
+                <div class="trending-item">
+                    <img src="./images/hoodies.jpg" alt="Hoodie" />
+                    <p>Oversized Hoodies</p>
+                    <button class="like-button">❤️</button>
+                </div>
+                <div class="trending-item">
+                    <img src="./images/jeans.jpg" alt="Jeans" />
+                    <p>Baggy Jeans</p>
+                    <button class="like-button">❤️</button>
+                </div>
+                <div class="trending-item">
+                    <img src="./images/heels.jpg" alt="Heels" />
+                    <p>Chunky Heels</p>
+                    <button class="like-button">❤️</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="f-marquee">
+            <div class="f-announcment_bar">
+                <p>SHIPPING WORLDWIDE</p>
+                <p>SHIPPING WORLDWIDE</p>
+                <p>SHIPPING WORLDWIDE</p>
+                <p>SHIPPING WORLDWIDE</p>
+                <p>SHIPPING WORLDWIDE</p>
+                <p>SHIPPING WORLDWIDE</p>
+                <p>SHIPPING WORLDWIDE</p>
+                <p>SHIPPING WORLDWIDE</p>
+                <p>SHIPPING WORLDWIDE</p>
+                <p>SHIPPING WORLDWIDE</p>
+                <p>SHIPPING WORLDWIDE</p>
+                <p>SHIPPING WORLDWIDE</p>
+                <p>SHIPPING WORLDWIDE</p>
+                <p>SHIPPING WORLDWIDE</p>
+            </div>
+        </div>
+        <div class="f-container">
+            <a href="index2.html" class="f-container-logo">Fashion Hub</a>
+            <div class="f-container-content">
+                <div class="f-navlist">
+                    <ul>
+                        <li class="l1">HELP</li>
+                        <li><a href="#">MEMBERS LOGIN</a></li>
+                        <li><a href="#">PLACE AN EXCHANGE/RETURN REQUEST</a></li>
+                        <li><a href="#">EXCHANGE/RETURNS POLICY</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">TERMS</a></li>
+                        <li><a href="#">SHIPPING</a></li>
+                    </ul>
+                </div>
+                <div class="f-navlist2">
+                    <ul>
+                        <li class="l1">COMPANY</li>
+                        <li><a href="#">STORY</a></li>
+                        <li><a href="#">OUR STORES</a></li>
+                        <li><a href="#">CAREERS</a></li>
+                        <li><a href="#">CONTACT US</a></li>
+                        <li><a href="#">COLLABORATIONS</a></li>
+                        <li><a href="#">BLOGS</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <p>&copy; 2025 Fashion Hub, All Rights Reserved.</p>
+    </footer>
+
+    <script>
+         document.querySelectorAll('.like-button').forEach(button => {
+        button.addEventListener('click', () => {
+            button.classList.toggle('liked');
+        });
+    });
+
+    // Set the current date dynamically
+const dateElement = document.getElementById('current-date');
+const today = new Date();
+const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+dateElement.textContent = today.toLocaleDateString('en-US', options);
+
+    </script>
+   
+</body>
+</html>
+

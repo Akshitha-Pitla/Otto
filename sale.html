@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sale - Fashion Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-...your-integrity-hash..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <header>    
+        <nav class="navbar">
+            <h1><a href="index.html">Fashion hub</a></h1>
+            <input type="checkbox" id="nav-toggle">
+            <label for="nav-toggle" class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </label>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="trending.html">Trending</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <main>
+        <section id="sale" class="section" style="padding: 70px; text-align: center;">
+            <h2>Sale</h2>
+            <p>Take advantage of our incredible sales! Get up to 50% off on a variety of products. Hurry, limited time offer!</p>
+
+            <div class="product-grid">
+                <div class="product-card">
+                    <video autoplay muted loop playsinline>
+                        <source src="./images/hoodie.mp4" type="video/mp4">
+                    </video>
+                    <p>Hoodies - 40% OFF</p>
+                </div>
+                <div class="product-card">
+                    <video autoplay muted loop playsinline>
+                        <source src="./images/Shoes.mp4" type="video/mp4">
+                    </video>
+                    <p>Casual Shoes - 30% OFF</p>
+                </div>
+                <div class="product-card">
+                    <img src="./images/jacket.jpg" alt="Winter Jacket">
+                    <p>Winter Jacket - 50% OFF</p>
+                </div>
+            </div>            
+
+            <div class="countdown">
+                <h3>Sale ends in:</h3>
+                <p id="timer">Loading...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="f-marquee">
+            <div class="f-announcment_bar">
+                <p>SHIPPING WORLDWIDE</p>
+                <p>SHIPPING WORLDWIDE</p>
+                <p>SHIPPING WORLDWIDE</p>
+                <p>SHIPPING WORLDWIDE</p>
+                <p>SHIPPING WORLDWIDE</p>
+                <p>SHIPPING WORLDWIDE</p>
+                <p>SHIPPING WORLDWIDE</p>
+                <p>SHIPPING WORLDWIDE</p>
+                <p>SHIPPING WORLDWIDE</p>
+                <p>SHIPPING WORLDWIDE</p>
+                <p>SHIPPING WORLDWIDE</p>
+                <p>SHIPPING WORLDWIDE</p>
+                <p>SHIPPING WORLDWIDE</p>
+                <p>SHIPPING WORLDWIDE</p>
+            </div>
+        </div>
+        <div class="f-container">
+            <a href="index2.html" class="f-container-logo">Fashion Hub</a>
+            <div class="f-container-content">
+                <div class="f-navlist">
+                    <ul>
+                        <li class="l1">HELP</li>
+                        <li><a href="#">MEMBERS LOGIN</a></li>
+                        <li><a href="#">PLACE AN EXCHANGE/RETURN REQUEST</a></li>
+                        <li><a href="#">EXCHANGE/RETURNS POLICY</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">TERMS</a></li>
+                        <li><a href="#">SHIPPING</a></li>
+                    </ul>
+                </div>
+                <div class="f-navlist2">
+                    <ul>
+                        <li class="l1">COMPANY</li>
+                        <li><a href="#">STORY</a></li>
+                        <li><a href="#">OUR STORES</a></li>
+                        <li><a href="#">CAREERS</a></li>
+                        <li><a href="#">CONTACT US</a></li>
+                        <li><a href="#">COLLABORATIONS</a></li>
+                        <li><a href="#">BLOGS</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <p>&copy; 2025 Fashion Hub, All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const saleEnd = new Date();
+        saleEnd.setHours(saleEnd.getHours() + 12); // Sale ends in 12 hours
+        function updateTimer() {
+            const now = new Date().getTime();
+            const distance = saleEnd - now;
+            const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((distance / 1000 / 60) % 60);
+            const seconds = Math.floor((distance / 1000) % 60);
+            document.getElementById("timer").innerHTML =
+                distance > 0 ? `${hours}h ${minutes}m ${seconds}s` : "Sale Ended";
+        }
+        setInterval(updateTimer, 1000);
+    </script>
+</body>
+</html>
